@@ -29,7 +29,6 @@
 
     $scope.searchInit = function() {
 
-      console.log(typeof $scope.location)
       if (typeof $scope.location === 'undefined') {
 
         handleError();
