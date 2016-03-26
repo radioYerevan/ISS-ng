@@ -29,7 +29,10 @@
 
     $scope.searchInit = function() {
 
-      if ($scope.location === 'undefined') {
+      console.log(typeof $scope.location)
+      if (typeof $scope.location === 'undefined') {
+
+        handleError();
         return;
       }
 
@@ -52,7 +55,9 @@
     }, 
     requestISSPass = function(lat, lon) {
 
-      $http.jsonp('http://api.open-notify.org/iss-pass.json?lat=' + lat + '&lon=' + lon + '&n=1' + '&callback=JSON_CALLBACK').
+      var url = 'http://api.open-notify.org/iss-pass.json?lat=' + lat + '&lon=' + lon + '&n=1' + '&callback=JSON_CALLBACK'
+
+      $http.jsonp(url).
 
       success(function(data) {
        //using moment.js to reliably convert this timestamp
@@ -61,7 +66,6 @@
 
         $scope.time = time._d;
 
-        console.log($scope.time);
 
          $scope.addLocation();
 
@@ -71,14 +75,33 @@
 
     $scope.addLocation = function() {
 
+      var locations = $scope.savedLocations;
+
+      for (var i=0; i<locations.length; i++) {
+        
+        if ($scope.location === locations[i].location) {
+
+          handleError();
+
+          return;
+
+        }
+
+      }
+
       $scope.savedLocations.push({
         location: $scope.location,
         date: $scope.time    
 
       });
+      
 
       localStorage.setItem('savedLocations', JSON.stringify($scope.savedLocations))
 
+    },
+    handleError = function() {
+
+      $('.app-inner').addClass('error');
 
     }
 
