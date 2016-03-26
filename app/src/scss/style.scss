@@ -1,0 +1,36 @@
+@import 'includes/normalize';
+
+* {
+
+	box-sizing: border-box;
+}
+
+body { 
+	background: url(../../img/sky.jpg) no-repeat;
+	background-size: cover;
+}
+
+
+.pageWrap {
+	color: #fff;
+}
+
+.app-inner {
+	max-width: 800px;
+	background-color: rgba(0,0,0,0.5);
+	margin: 100px auto 0;
+	text-align: center;
+	padding: 40px 0;
+
+	input[type="text"] {
+		padding: 10px;
+		margin-right: 15px;
+		color: #666;
+	}
+
+	button {
+		padding: 12px;
+		color: #666;
+		margin-left: 15px;
+	}
+}

@@ -1,0 +1,45 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ISS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,600' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="dist/css/style.css">
+
+    </head>
+    <body>
+
+        <div class="pageWrap" ng-app="ISS">
+
+
+            <div class="app-inner" ng-controller="MainController">
+
+                <h1>Where is the International Space Station</h1>
+
+                <input type="text" placeholder="I'm here" ng-model="location">
+                <button class="search" ng-click="searchInit()">where</button>
+
+        </div>
+
+
+
+
+   <!--  <i ng-show="loading" class="fa fa-3x fa-spinner fa-spin"></i> -->
+
+</div>
+
+        </div>
+
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="src/js/app.js"></script>
+       
+    </body>
+</html>
