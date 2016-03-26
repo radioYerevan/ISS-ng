@@ -34,7 +34,9 @@
 
         handleError();
         return;
-      }
+      } 
+
+      clearError();
 
       $scope.loading = true;
       //need to turn location into lat/lon
@@ -100,9 +102,10 @@
 
     },
     handleError = function() {
-
       $('.app-inner').addClass('error');
-
+    }, 
+    clearError = function() {
+      $('.app-inner').removeClass('error');
     }
 
 
