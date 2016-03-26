@@ -1,0 +1,27 @@
+{
+  "name": "turo-test",
+  "version": "0.0.0",
+  "authors": [
+    "scojo info@sdjohnsonco.com"
+  ],
+  "description": "let's find a car!",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.0",
+    "angular-route": "^1.5.0",
+    "jquery": "^2.2.1",
+    "animate.css": "^3.5.1",
+    "font-awesome": "fontawesome#^4.5.0",
+    "moment": "^2.12.0"
+  }
+}
