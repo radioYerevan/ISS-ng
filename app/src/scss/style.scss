@@ -33,4 +33,16 @@ body {
 		color: #666;
 		margin-left: 15px;
 	}
+
+	.results {
+		list-style: none;
+		text-align: left; 
+
+		 li {
+		 	margin-bottom: 15px;
+		 	p {
+		 		margin: 0;
+		 	}
+		 }
+	}
 }

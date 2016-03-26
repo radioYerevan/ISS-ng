@@ -41,7 +41,6 @@
 
       .then(function(response) {
 
-        $scope.loading = false;
         //there could be any number of results, (5 cities named Paris for example), we're just going to grab the first one
         var lat = response.data.results[0].geometry.location.lat,
             lon = response.data.results[0].geometry.location.lng;
@@ -74,13 +73,12 @@
 
       $scope.savedLocations.push({
         location: $scope.location,
-        date    : $scope.time    
+        date: $scope.time    
 
       });
 
       localStorage.setItem('savedLocations', JSON.stringify($scope.savedLocations))
 
-      console.log($scope.saved);
 
     }
 

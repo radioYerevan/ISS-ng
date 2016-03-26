@@ -20,13 +20,16 @@
 
             <div class="app-inner" ng-controller="MainController">
 
-                <h1>Where is the International Space Station</h1>
+                <h1>When Will The International Space Station Pass Next?</h1>
 
                 <input type="text" placeholder="I'm here" ng-model="location">
                 <button class="search" ng-click="searchInit()">where</button>
 
                 <ul class="results">
-                    
+                    <li ng-repeat="location in savedLocations track by $index">
+                        <p> Saved location:  {{location.location}}</p>
+                        <p> Next Pass: {{location.date}}</p>
+                    </li>
                 </ul>
 
             </div>
